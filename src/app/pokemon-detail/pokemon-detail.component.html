@@ -1,0 +1,10 @@
+<div *ngIf="pokemon" class="pokemon-detail">
+    <img [src]="pokemon.sprites.front_default" alt="{{ pokemon.name }}" class="pokemon-image">
+    <h2 class="pokemon-name">{{ pokemon.name | titlecase }}</h2>
+    <p><strong>Habilidades:</strong></p>
+    <ul>
+      <li *ngFor="let ability of pokemon.abilities" class="pokemon-ability">{{ ability.ability.name }}</li>
+    </ul>
+   
+  </div>
+  
